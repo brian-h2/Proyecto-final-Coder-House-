@@ -1,0 +1,26 @@
+
+
+//Variable
+
+$color-background: #103e46;
+$color-primary-text: #07c5b9;
+$ancho: 100%;
+$font: 'Josefin Sans', sans-serif;
+
+//Para realizar operaciones
+
+$font-size: 2px;
+
+//Imports
+
+
+@import "body";
+@import "variables.scss";
+@import "grids";
+@import "nav";
+@import "header";
+@import "main";
+@import "aside";
+@import "footer";
+@import "mediaqueries";
+

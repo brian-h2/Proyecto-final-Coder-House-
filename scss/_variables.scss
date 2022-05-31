@@ -1,0 +1,175 @@
+
+
+/*Variables*/
+
+//Extends
+
+/*Header de inicio*/
+
+%titles-index {
+	text-align: center;
+	margin-top: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: sans-serif;
+	font-weight: 700;
+	@if ('{h1}' != 'h2')
+	{
+		color: rgb(255, 255, 255);
+		text-shadow:  rgb(32, 99, 122) 2px 2px 2px;
+		font-size: 17px;
+	}
+}
+
+/*Historia Facebook*/
+
+%images {
+    display: flex;
+    margin: 4px;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.img-history-background{
+    @extend %images;
+    margin: 4px;
+}
+
+#historia {
+    @extend %images;
+}
+
+#ubicacion {
+    @extend %images;
+}
+
+
+/*Sobre Nosotros*/
+
+//Maps
+
+$lista-1: info-1, info-2, info-3;
+
+@each $textos in $lista-1 {
+    .#{$textos} {
+        font-family:'B612', sans-serif;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        @if ('{$textos}' == '.info-1')
+         {
+            font-family:Arial, Helvetica, sans-serif;
+         }
+
+        @else {
+            font-family:'Times New Roman', Times, serif;
+        }
+        img {
+            width: $ancho;
+            border-radius: 20px;
+            padding: 10px;
+            align-items: center;
+            max-width: 500px;
+            display:block;
+            margin:auto;
+        }
+        p {
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            max-width: 904px;    
+        }
+    }
+}
+
+
+//Mixins 
+
+/*Main de sobre nosotros*/
+
+@mixin heads {
+    text-align: center;
+    color: rgb(20, 201, 189);
+    border-bottom-style: solid;
+            border-bottom-width: 3px;
+            border-bottom-color: #ffffff;
+            border-right: 20px;
+    line-height: 35px;
+    letter-spacing: 4px;
+    padding-bottom: 25px;
+    font-weight: 600;
+}
+
+.sobre-nosotros {
+    .info-1 {
+        h1 {
+            @include heads;
+        }
+    } 
+    .info-2 {
+        h2 {
+            @include heads;
+        }
+    }
+    .info-3 {
+        h3 {
+            @include heads;
+        }
+    }
+}
+
+/*Header de facebook*/
+
+@mixin titles {
+    margin-bottom: 30px;
+}
+
+    .title-facebook {
+    @include titles;
+    margin-top: 20px;
+    }
+
+    .subtitle-facebook {
+    @include titles; 
+    }
+
+
+/*Main de contacto*/
+
+@mixin forms {
+    display: block;
+    width: $ancho;
+    margin-bottom: 8px;  
+    color: gray;
+}
+
+    .formulario {
+    padding: .8rem;
+	overflow: hidden;
+	color: gray; 
+        label {
+            @include forms;
+            font-weight: 700;
+        }
+        input {
+            @include forms;
+            border: none;
+            border-bottom: 2px solid #b8e3ea;
+            margin-bottom: 20px;
+            font-size: 16px;
+            outline: none;      
+        }
+        textarea {
+            @include forms;
+            border: none;
+            border-bottom: 2px solid #b8e3ea;
+            margin-bottom: 20px;
+            font-size: 11px;
+            outline: none;
+            min-height: 150px;   
+        }
+    }
+
+
+

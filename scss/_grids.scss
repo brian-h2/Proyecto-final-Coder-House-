@@ -1,0 +1,55 @@
+
+/*Grids*/
+
+.contenedor {
+	display: grid;
+	grid-template-areas:  "nav" "header" "main" "aside" "footer"
+	;
+ 	justify-items: center;
+ 	align-items: center;
+	grid-template-columns: 1fr ;
+}
+
+/*Grid 2*/
+
+.contenedor-2 {
+	display: grid;
+	grid-template-areas: "nav" "header" "main" "aside" "footer";
+	justify-items: center;
+ 	align-items: center;
+}
+
+
+/*Grid 3*/
+
+.contenedor-3 {
+	display: grid;
+	grid-template-areas: "nav" "header" "main" "aside" "footer" 
+	;
+ 	justify-items: center;
+ 	align-items: center;
+}
+
+/*Grid 4*/
+
+.contenedor-4 {
+	display: grid;
+	grid-template-areas: "nav nav" "header header" "main main" "footer footer";
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 2fr 2fr;
+}
+
+
+/*Grid 5*/
+
+.contenedor-5 {
+	height: 200px;
+	padding: 0px;
+	display:grid;
+	grid-template-areas: "nav" "header" "main" "aside" "footer";
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr;
+
+}
