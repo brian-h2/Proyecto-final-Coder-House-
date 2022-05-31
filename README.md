@@ -1,4 +1,4 @@
-# Aplicando-Bootstrap
+# Proyecto Final
 Este es mi proyecto de Coder House, bastante simple no muy complicado pero con un proposito normal se podria decir como cualquier otra pagina que brinda informacion sobre temas en concreto.
 
 ## Variables 
